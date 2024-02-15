@@ -31,23 +31,26 @@ function removeKeyboardBackground(elementId){
 
 
 
-// function getElementValue (elementId){
+function getTextElementValueById(elementId){
+    const element = document.getElementById(elementId);
+    const elementValueText = element.innerText;
+    const value = parseInt(elementValueText);
+    return value;
+}
 
-//     const element =document.getElementById(elementId);
-//     const elementValue = element.innerText;
-//     const value = parseInt(elementValue);
-//     return value;
+function setTextElementValueById(elementId, value){
+    const element = document.getElementById(elementId);
+    element.innerText = value;
+}
 
 
-// }
 
-// function setElementValue ( elementId , value){
 
-//     const element = document.getElementById(elementId);
-//     element.innerText = value ;
-
-// }
-
+function getElementTextById(elementId){
+    const element = document.getElementById(elementId);
+    const text = element.innerText;
+    return text;
+}
 
 
 

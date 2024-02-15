@@ -18,9 +18,16 @@
 
 function keyboardButtonPress(event){
 
+
+
+
     playerPressed = event.key;
     // console.log('Player Pressed', playerPressed);
 
+// game stop
+    if(playerPressed === 'Escape'){
+        gameOver();
+    }
 
 
     // jeta deyar kotha cilo 
@@ -122,6 +129,9 @@ function playNow(){
     showElementById('playGround')
 
     // set Score And Life
+    setTextElementValueById('currentLife' , 3 );
+    setTextElementValueById('scoreUpdate' , 0 );
+
     continueGame()
 }
 
@@ -130,6 +140,18 @@ function gameOver(){
 
     hideElementById('playGround');
     showElementById('scoreBoard')
+
+
+    // update final score
+    // 1.get the final score
+    const lastScore = getTextElementValueById('scoreUpdate');
+    console.log(lastScore);
+    setTextElementValueById('result', lastScore);
+
+    // clear the last selected alphabet highlight
+    const getCurrentAlphabet = getElementTextById('currentAlphabet');
+    // console.log(getCurrentAlphabet);
+    removeKeyboardBackground(getCurrentAlphabet);
 
 }
 
