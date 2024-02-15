@@ -116,17 +116,19 @@
 
 
 
-        <section class="flex justify-center items-center h-screen hidden">
+        <section id="scoreBoard" class="flex justify-center items-center h-screen hidden">
 
 <!-- Score Board -->
             <div class=" text-white flex flex-col items-center gap-5 bg-[#ffffff25] p-5 rounded-xl">
 
+                <h1 class="text-5xl font-extrabold">Game Over</h1>
                 <h1 class="text-9xl">
+                    
                     <span class="font-extrabold">Score:</span>
                     <span>14</span>
                 </h1>
 
-                <button class="btn btn-secondary">Play Again</button>
+                <button onclick="playNow()" class="btn btn-secondary">Play Again</button>
                 <p>Practice will make you a Pro</p>
                  
 

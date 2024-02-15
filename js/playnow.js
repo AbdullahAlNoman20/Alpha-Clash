@@ -37,10 +37,13 @@ function keyboardButtonPress(event){
         console.log('Get Point');
 
 
-        // const currentScore = getElementValue('scoreUpdate');
-        // console.log(currentScore);
+        // const currentScore = getTextElementValueById('current-score');
+        // const updatedScore = currentScore + 1;
+        // setTextElementValueById('current-score', updatedScore);
         // const newScore = currentScore + 1;
-        // setElementValue(newScore);
+        // removeBackgroundColorById(expectedAlphabet);
+        // continueGame();
+
 
         // score Update
         const currentScoreElement = document.getElementById('scoreUpdate');
@@ -75,6 +78,13 @@ function keyboardButtonPress(event){
          currentLifeElement.innerText = newLife;
  
 
+         if (newLife===0){
+
+            gameOver(); 
+
+
+         }
+
 
     }
 
@@ -108,10 +118,19 @@ const alphabet = getRandomAlphabet();
 function playNow(){
 
     hideElementById('homeScreen')
-
+    hideElementById('scoreBoard')
     showElementById('playGround')
 
+    // set Score And Life
     continueGame()
+}
+
+
+function gameOver(){
+
+    hideElementById('playGround');
+    showElementById('scoreBoard')
+
 }
 
 
