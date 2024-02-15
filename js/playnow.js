@@ -16,10 +16,48 @@
 
 // }
 
+function keyboardButtonPress(event){
+
+    playerPressed = event.key;
+    // console.log('Player Pressed', playerPressed);
+
+
+
+    // jeta deyar kotha cilo 
+
+    const presentAlphabetElement = document.getElementById('currentAlphabet');
+    const presentAlphabet = presentAlphabetElement.innerText;
+    const expectedAlphabet = presentAlphabet.toLowerCase();
+    console.log(playerPressed,expectedAlphabet );
+
+
+    // check match or not 
+
+    if(playerPressed === expectedAlphabet){
+        console.log('Get Point');
+        console.log('pressed currently', playerPressed);
+        removeKeyboardBackground(playerPressed);
+        continueGame();
+    }
+    else{
+
+        console.log('lost life : ধুর মিয়া  Press right key ');
+    }
+
+
+
+}
+
+document.addEventListener('keyup',keyboardButtonPress )
+
+
+
+
+
 function continueGame(){
 
 const alphabet = getRandomAlphabet();
-console.log('your randomly genareted Word is ', alphabet);
+// console.log('your randomly generated Word is ', alphabet);
 
 
 
