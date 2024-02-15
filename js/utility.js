@@ -31,6 +31,27 @@ function removeKeyboardBackground(elementId){
 
 
 
+// function getElementValue (elementId){
+
+//     const element =document.getElementById(elementId);
+//     const elementValue = element.innerText;
+//     const value = parseInt(elementValue);
+//     return value;
+
+
+// }
+
+// function setElementValue ( elementId , value){
+
+//     const element = document.getElementById(elementId);
+//     element.innerText = value ;
+
+// }
+
+
+
+
+
 
 
 function getRandomAlphabet(){

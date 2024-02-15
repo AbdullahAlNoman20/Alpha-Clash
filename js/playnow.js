@@ -35,13 +35,47 @@ function keyboardButtonPress(event){
 
     if(playerPressed === expectedAlphabet){
         console.log('Get Point');
+
+
+        // const currentScore = getElementValue('scoreUpdate');
+        // console.log(currentScore);
+        // const newScore = currentScore + 1;
+        // setElementValue(newScore);
+
+        // score Update
+        const currentScoreElement = document.getElementById('scoreUpdate');
+        const currentScoreNumber = currentScoreElement.innerText;
+        const currentScore = parseInt(currentScoreNumber);
+        console.log(currentScore);
+
+        // Increase Score
+
+        const newScore = currentScore + 1;
+        currentScoreElement.innerText = newScore;
+
+
+        // New Round
         console.log('pressed currently', playerPressed);
         removeKeyboardBackground(playerPressed);
         continueGame();
     }
     else{
 
-        console.log('lost life : ধুর মিয়া  Press right key ');
+        console.log('lost life : Press right key ');
+
+         // Life Update
+         const currentLifeElement = document.getElementById('currentLife');
+         const currentLifeNumber = currentLifeElement.innerText;
+         const currentLife = parseInt(currentLifeNumber);
+         console.log(currentLife);
+ 
+         // Reduce life
+ 
+         const newLife = currentLife - 1;
+         currentLifeElement.innerText = newLife;
+ 
+
+
     }
 
 
